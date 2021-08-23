@@ -44,7 +44,7 @@ async function transfer(
     await client.query("rollback")
     client.release()
     console.timeEnd("throw " + nth)
-    return
+    throw new Error(`${from} doesn't have enough to send ${amount}`)
   }
   console.timeEnd("throw " + nth)
   console.time("recieve " + nth)

@@ -64,6 +64,8 @@ async function main() {
   await unseed()
   await seed()
   console.time("transfer")
+  // await transfer(1, "alice@prisma.io", "bob@prisma.io", 100)
+  // await transfer(2, "alice@prisma.io", "bob@prisma.io", 100)
   await Promise.all([
     transfer(1, "alice@prisma.io", "bob@prisma.io", 100),
     transfer(2, "alice@prisma.io", "bob@prisma.io", 100),
